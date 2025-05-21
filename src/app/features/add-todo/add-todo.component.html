@@ -1,0 +1,10 @@
+<div class="flex gap-2">
+  <input
+    type="text"
+    class="input input-bordered w-full"
+    placeholder="Add a new
+  todo..."
+    [(ngModel)]="todoTitle"
+  />
+  <button class="btn btn-primary" (click)="onAddTodo()">Add</button>
+</div>

@@ -1,0 +1,29 @@
+<div class="flex items-center justify-between bg-base-100 shadow-md p-4">
+  <div class="flex items-center gap-2">
+    <input
+      type="checkbox"
+      class="checkbox mr-2"
+      [checked]="todo().completed"
+      (change)="onToggleTodo(todo())"
+    />
+    <div class="flex-1">
+      <span [class.line-through]="todo().completed" *ngIf="!isEditting">{{
+        todo().title
+      }}</span>
+      <input
+        type="text"
+        class="input input-bordered"
+        *ngIf="isEditting"
+        [(ngModel)]="editedTodo"
+      />
+    </div>
+  </div>
+  <div class="flex items-center gap-3">
+    <button class="btn btn-sm btn-info" (click)="onEditTodo(todo())">
+      {{ isEditting ? "✅" : "📝" }}
+    </button>
+    <button class="btn btn-sm btn-error" (click)="onDeleteTodo(todo())">
+      🗑
+    </button>
+  </div>
+</div>

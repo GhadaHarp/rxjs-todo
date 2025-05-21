@@ -1,0 +1,30 @@
+<div class="flex gap-4 items-center">
+  <label class="label cursor-pointer">
+    <span class="label-text mr-2">All</span>
+    <input
+      type="radio"
+      name="filter"
+      class="radio"
+      checked
+      (change)="setFilter('all')"
+    />
+  </label>
+  <label class="label cursor-pointer">
+    <span class="label-text mr-2">Todo</span>
+    <input
+      type="radio"
+      name="filter"
+      class="radio"
+      (change)="setFilter('todo')"
+    />
+  </label>
+  <label class="label cursor-pointer">
+    <span class="label-text mr-2">Done</span>
+    <input
+      type="radio"
+      name="filter"
+      class="radio"
+      (change)="setFilter('done')"
+    />
+  </label>
+</div>
